@@ -1,0 +1,17 @@
+# Icons Folder
+
+This folder contains icon files and favicons for your website.
+
+## Recommended Files:
+- favicon.ico - Main favicon
+- favicon-16x16.png - 16x16 favicon
+- favicon-32x32.png - 32x32 favicon
+- apple-touch-icon.png - Apple touch icon
+- android-chrome-192x192.png - Android chrome icon
+- android-chrome-512x512.png - Android chrome icon
+- site.webmanifest - Web app manifest
+
+## Icon Generation:
+You can generate these icons using online tools like:
+- https://realfavicongenerator.net/
+- https://favicon.io/
