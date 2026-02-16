@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { FaBars, FaTimes, FaDownload, FaMoon, FaSun } from 'react-icons/fa'
 import { useTheme } from '@/components/ThemeProvider'
 import { useNavigationProgress } from '@/components/NavigationProgress'
+import { basePath } from '@/utils/constants'
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -91,7 +92,7 @@ const Header = () => {
                 )}
               </button>
               <a 
-                href="/images/Resume/Syed Asfar Ahmad Bukhari - Resume.pdf" 
+                href={`${basePath}/images/Resume/Syed Asfar Ahmad Bukhari - Resume.pdf`} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 px-3 py-2 bg-gray-800 dark:bg-dark-card text-white font-medium rounded-lg hover:bg-gray-900 dark:hover:bg-zinc-600 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
@@ -181,7 +182,7 @@ const Header = () => {
                 </div>
                 <div className="mx-3 mt-2 pt-3 border-t border-gray-200 dark:border-gray-700">
                   <a
-                    href="/images/Resume/Syed Asfar Ahmad Bukhari - Resume.pdf"
+                    href={`${basePath}/images/Resume/Syed Asfar Ahmad Bukhari - Resume.pdf`}
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setIsMobileMenuOpen(false)}

@@ -5,6 +5,7 @@ import { useInView } from 'react-intersection-observer'
 import { FaQuoteLeft, FaLinkedin } from 'react-icons/fa'
 import Image from 'next/image'
 import AnimatedBackground from '@/components/ui/AnimatedBackground'
+import { basePath } from '@/utils/constants'
 
 type TestimonialItem = {
   quote: string
@@ -137,7 +138,7 @@ const Testimonials = ({ showSectionHeader = true, skipBackground = false }: Test
                         <div className="relative h-12 w-12 md:h-14 md:w-14 shrink-0 overflow-hidden rounded-full bg-gradient-to-br from-[#00ABFB] to-[#0090d4] shadow-lg shadow-[#00ABFB]/25">
                           {item.image ? (
                             <Image
-                              src={item.image}
+                              src={`${basePath}${item.image}`}
                               alt={item.name}
                               fill
                               sizes="56px"

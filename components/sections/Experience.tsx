@@ -5,6 +5,7 @@ import { useInView } from 'react-intersection-observer'
 import { FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa'
 import Image from 'next/image'
 import AnimatedBackground from '@/components/ui/AnimatedBackground'
+import { basePath } from '@/utils/constants'
 
 type ExperienceCard = {
   title: string
@@ -155,7 +156,7 @@ function ExperienceCardBlock({
           <div className="flex items-start justify-between gap-3 mb-5">
             <div className="relative w-14 h-14 shrink-0">
               <Image
-                src={item.logo}
+                src={`${basePath}${item.logo}`}
                 alt={`${item.company} logo`}
                 fill
                 className="object-contain"

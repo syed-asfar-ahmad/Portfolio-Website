@@ -1,10 +1,13 @@
+// Base path for GitHub Pages (set in CI; empty when running locally)
+export const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+
 // Site configuration and constants
 export const SITE_CONFIG = {
   name: 'Syed Asfar Ahmad Bukhari',
   title: 'Syed Asfar Ahmad Bukhari - Portfolio',
   description: 'Web Developer & Data Scientist based in Pakistan',
   url: 'https://asfar-portfolio.com',
-  ogImage: '/images/og-image.jpg',
+  ogImage: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/og-image.jpg`,
   links: {
     github: 'https://github.com/asfar-bukhari',
     linkedin: 'https://linkedin.com/in/asfar-bukhari',

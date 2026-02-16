@@ -6,6 +6,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 import AnimatedBackground from '@/components/ui/AnimatedBackground'
+import { basePath } from '@/utils/constants'
 
 type HeroProps = { skipBackground?: boolean }
 
@@ -122,7 +123,7 @@ const Hero = ({ skipBackground = false }: HeroProps) => {
             <motion.div variants={itemVariants} className="relative w-64 h-64 sm:w-80 sm:h-80 mx-auto">
               <div className="absolute inset-0 rounded-[40%] bg-gray-400 dark:bg-gray-600 blur-2xl opacity-30"></div>
               <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white dark:border-gray-700 shadow-xl">
-                <Image src="/images/logos/PROFILE.png" alt="Profile photo" fill className="object-cover object-top" />
+                <Image src={`${basePath}/images/logos/PROFILE.png`} alt="Profile photo" fill className="object-cover object-top" />
               </div>
             </motion.div>
           </div>

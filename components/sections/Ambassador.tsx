@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { FaRocket, FaCalendarAlt, FaMapMarkerAlt, FaUniversity } from 'react-icons/fa'
 import Image from 'next/image'
+import { basePath } from '@/utils/constants'
 
 const Ambassador = () => {
   const [ref, inView] = useInView({
@@ -104,7 +105,7 @@ const Ambassador = () => {
                     {/* Logo */}
                     <div className="w-10 h-10 sm:w-14 sm:h-14 relative flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                       <Image
-                        src={ambassador.logo}
+                        src={`${basePath}${ambassador.logo}`}
                         alt={`${ambassador.organization} logo`}
                         fill
                         className="object-contain"

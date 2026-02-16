@@ -5,6 +5,7 @@ import { useInView } from 'react-intersection-observer'
 import { FaMapMarkerAlt, FaCalendarAlt, FaUniversity } from 'react-icons/fa'
 import Image from 'next/image'
 import AnimatedBackground from '@/components/ui/AnimatedBackground'
+import { basePath } from '@/utils/constants'
 
 type EducationProps = { skipBackground?: boolean }
 
@@ -21,7 +22,7 @@ const Education = ({ skipBackground = false }: EducationProps) => {
       period: 'February 2021 - January 2025',
       location: 'Lahore',
       status: 'Completed',
-      logo: '/images/logos/COMSATS.png'
+      logo: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/logos/COMSATS.png`
     },
     {
       degree: 'FSc Pre-Engineering',
@@ -29,7 +30,7 @@ const Education = ({ skipBackground = false }: EducationProps) => {
       period: 'August 2018 - March 2020',
       location: 'Lahore',
       status: 'Completed',
-      logo: '/images/logos/PGC.png'
+      logo: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/logos/PGC.png`
     },
     {
       degree: 'Matriculation',
@@ -37,7 +38,7 @@ const Education = ({ skipBackground = false }: EducationProps) => {
       period: 'April 2016 - March 2018',
       location: 'Lahore',
       status: 'Completed',
-      logo: '/images/logos/HASHMAT.png'
+      logo: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/logos/HASHMAT.png`
     }
   ]
 
@@ -172,7 +173,7 @@ const Education = ({ skipBackground = false }: EducationProps) => {
                   <div className="relative flex flex-col h-full">
                     <div className="flex items-start justify-between gap-3 mb-5">
                       <div className="relative w-14 h-14 shrink-0">
-                        <Image src="/images/logos/NAVTTC.png" alt="NAVTTC" fill className="object-contain" />
+                        <Image src={`${basePath}/images/logos/NAVTTC.png`} alt="NAVTTC" fill className="object-contain" />
                       </div>
                       <span className="shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-gray-100 dark:bg-zinc-700 text-gray-600 dark:text-gray-300">
                         Completed
@@ -214,7 +215,7 @@ const Education = ({ skipBackground = false }: EducationProps) => {
                   <div className="relative flex flex-col h-full">
                     <div className="flex items-start justify-between gap-3 mb-5">
                       <div className="relative w-14 h-14 shrink-0">
-                        <Image src="/images/logos/PNY.png" alt="PNY Trainings" fill className="object-contain" />
+                        <Image src={`${basePath}/images/logos/PNY.png`} alt="PNY Trainings" fill className="object-contain" />
                       </div>
                       <span className="shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-gray-100 dark:bg-zinc-700 text-gray-600 dark:text-gray-300">
                         Completed

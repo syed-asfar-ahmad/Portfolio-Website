@@ -7,13 +7,15 @@ import { NavigationProgressProvider } from '@/components/NavigationProgress'
 
 const inter = Inter({ subsets: ['latin'] })
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+
 export const metadata: Metadata = {
   title: 'Syed Asfar Ahmad Bukhari - Portfolio',
   description: 'Personal portfolio website showcasing my work and skills',
   icons: {
-    icon: '/images/logos/LOGO.ico',
-    shortcut: '/images/logos/LOGO.ico',
-    apple: '/images/logos/LOGO.png',
+    icon: `${basePath}/images/logos/LOGO.ico`,
+    shortcut: `${basePath}/images/logos/LOGO.ico`,
+    apple: `${basePath}/images/logos/LOGO.png`,
   },
 }
 

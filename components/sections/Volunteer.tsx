@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { FaHeart, FaUsers, FaHandsHelping, FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa'
 import Image from 'next/image'
+import { basePath } from '@/utils/constants'
 
 const Volunteer = () => {
   const [ref, inView] = useInView({
@@ -134,7 +135,7 @@ const Volunteer = () => {
                     {/* Logo */}
                     <div className={`${volunteer.organization.includes('VLG') ? 'w-12 h-12 sm:w-14 sm:h-14' : 'w-10 h-10 sm:w-12 sm:h-12'} relative flex-shrink-0`}>
                       <Image
-                        src={volunteer.logo}
+                        src={`${basePath}${volunteer.logo}`}
                         alt={`${volunteer.organization} logo`}
                         fill
                         className="object-contain"
