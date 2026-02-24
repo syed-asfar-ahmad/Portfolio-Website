@@ -6,7 +6,7 @@ import { FaLinkedin, FaMapMarkerAlt } from 'react-icons/fa'
 import KW from 'country-flag-icons/react/3x2/KW'
 import Image from 'next/image'
 import AnimatedBackground from '@/components/ui/AnimatedBackground'
-import aboutImage from '@/public/images/logos/ABOUT.jpg'
+import aboutImage from '../../public/images/logos/ABOUT.jpg'
 
 const aboutParagraphs = [
   'I am a Full Stack Developer with a background in Software Engineering and professional experience building modern web applications. I work across both frontend and backend, focusing on creating reliable, well structured solutions that are easy to use and scale effectively.',
