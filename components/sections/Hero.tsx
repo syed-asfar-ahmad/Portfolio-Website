@@ -112,7 +112,7 @@ const Hero = ({ skipBackground = false }: HeroProps) => {
                   <a href="https://linkedin.com/in/syed-asfar-ahmad-bukhari" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-[#0A66C2] text-white hover:bg-[#004182] transform hover:scale-110 transition-all duration-200 shadow-md" aria-label="LinkedIn">
                     <FaLinkedin className="w-5 h-5" />
                   </a>
-                  <a href="mailto:syedasfar27@gmail.com" className="p-3 rounded-full bg-[#EA4335] text-white hover:bg-[#d93025] transform hover:scale-110 transition-all duration-200 shadow-md" aria-label="Email">
+                  <a href="mailto:contact@syedasfar.com" className="p-3 rounded-full bg-[#EA4335] text-white hover:bg-[#d93025] transform hover:scale-110 transition-all duration-200 shadow-md" aria-label="Email">
                     <FaEnvelope className="w-5 h-5" />
                   </a>
                 </div>

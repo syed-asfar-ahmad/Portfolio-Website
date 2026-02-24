@@ -133,7 +133,7 @@ const Volunteer = () => {
                   <div className="absolute top-0 left-0 right-0 h-1 bg-gray-600 dark:bg-gray-500"></div>
                   <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4">
                     {/* Logo */}
-                    <div className={`${volunteer.organization.includes('VLG') ? 'w-12 h-12 sm:w-14 sm:h-14' : 'w-10 h-10 sm:w-12 sm:h-12'} relative flex-shrink-0`}>
+                    <div className={`${volunteer.organization.includes('VLG') ? 'w-14 h-14 sm:w-16 sm:h-16' : 'w-10 h-10 sm:w-12 sm:h-12'} relative flex-shrink-0`}>
                       <Image
                         src={`${basePath}${volunteer.logo}`}
                         alt={`${volunteer.organization} logo`}

@@ -46,7 +46,7 @@ const Contact = ({ showSectionHeader = true, skipBackground = false }: ContactPr
       setFormData({ name: '', email: '', subject: '', message: '' })
     } catch (error) {
       const emailBody = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0ASubject: ${formData.subject}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`
-      const mailtoLink = `mailto:syedasfar27@gmail.com?subject=${encodeURIComponent(`Contact: ${formData.subject}`)}&body=${emailBody}`
+      const mailtoLink = `mailto:contact@syedasfar.com?subject=${encodeURIComponent(`Contact: ${formData.subject}`)}&body=${emailBody}`
       toast.error('Sending failed. Opening email client.')
       window.open(mailtoLink, '_blank')
     } finally {
@@ -55,7 +55,7 @@ const Contact = ({ showSectionHeader = true, skipBackground = false }: ContactPr
   }
 
   const contactItems = [
-    { icon: FaEnvelope, label: 'Email', value: 'syedasfar27@gmail.com', href: 'mailto:syedasfar27@gmail.com' },
+    { icon: FaEnvelope, label: 'Email', value: 'contact@syedasfar.com', href: 'mailto:contact@syedasfar.com' },
     { icon: FaPhone, label: 'Phone', value: '+92 318 4318539', href: 'tel:+923184318539' },
     { icon: FaMapMarkerAlt, label: 'Location', value: 'Lahore, Pakistan', href: undefined },
   ]

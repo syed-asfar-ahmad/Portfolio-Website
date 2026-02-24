@@ -140,6 +140,8 @@ function ExperienceCardBlock({
   index: number
   inView: boolean
 }) {
+  const hasLargeLogo = item.company.includes('TxLabz') || item.company.includes('VLG')
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -154,7 +156,7 @@ function ExperienceCardBlock({
 
         <div className="relative flex flex-col h-full">
           <div className="flex items-start justify-between gap-3 mb-5">
-            <div className="relative w-14 h-14 shrink-0">
+            <div className={`relative ${hasLargeLogo ? 'w-16 h-16 sm:w-[4.25rem] sm:h-[4.25rem]' : 'w-14 h-14'} shrink-0`}>
               <Image
                 src={`${basePath}${item.logo}`}
                 alt={`${item.company} logo`}

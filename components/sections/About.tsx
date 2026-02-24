@@ -6,7 +6,7 @@ import { FaLinkedin, FaMapMarkerAlt } from 'react-icons/fa'
 import KW from 'country-flag-icons/react/3x2/KW'
 import Image from 'next/image'
 import AnimatedBackground from '@/components/ui/AnimatedBackground'
-import { basePath } from '@/utils/constants'
+import aboutImage from '@/public/images/logos/ABOUT.jpg'
 
 const aboutParagraphs = [
   'I am a Full Stack Developer with a background in Software Engineering and professional experience building modern web applications. I work across both frontend and backend, focusing on creating reliable, well structured solutions that are easy to use and scale effectively.',
@@ -88,13 +88,14 @@ const About = ({ skipBackground = false }: AboutProps) => {
                 <div className="absolute inset-3 sm:inset-4 rounded-xl border border-[#00ABFB]/40 pointer-events-none" aria-hidden />
                 <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden bg-gray-50 dark:bg-zinc-900/50">
                   <Image
-                    src={`${basePath}/images/logos/ABOUT.jpg`}
+                    src={aboutImage}
                     alt="About"
                     fill
                     className="object-cover object-center"
-                    sizes="(max-width: 1024px) 340px, 400px"
+                    sizes="(max-width: 1024px) 340px, 520px"
                     priority
-                    quality={95}
+                    quality={100}
+                    unoptimized
                   />
                 </div>
               </div>
