@@ -6,7 +6,7 @@ import { FaLinkedin, FaMapMarkerAlt } from 'react-icons/fa'
 import KW from 'country-flag-icons/react/3x2/KW'
 import Image from 'next/image'
 import AnimatedBackground from '@/components/ui/AnimatedBackground'
-import aboutImage from '../../public/images/logos/ABOUT.jpg'
+import { basePath } from '@/utils/constants'
 
 const aboutParagraphs = [
   'I am a Full Stack Developer with a background in Software Engineering and professional experience building modern web applications. I work across both frontend and backend, focusing on creating reliable, well structured solutions that are easy to use and scale effectively.',
@@ -88,7 +88,7 @@ const About = ({ skipBackground = false }: AboutProps) => {
                 <div className="absolute inset-3 sm:inset-4 rounded-xl border border-[#00ABFB]/40 pointer-events-none" aria-hidden />
                 <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden bg-gray-50 dark:bg-zinc-900/50">
                   <Image
-                    src={aboutImage}
+                    src={`${basePath}/images/logos/ABOUT.jpg`}
                     alt="About"
                     fill
                     className="object-cover object-center"
@@ -119,45 +119,47 @@ const About = ({ skipBackground = false }: AboutProps) => {
             </div>
           </motion.div>
 
-          {/* Mentor — clear section with background; wrapper only for entrance, inner div for hover */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={inView ? { opacity: 1 } : {}}
-            transition={{ duration: 0.5, delay: 0.6 }}
-          >
-            <div className="rounded-2xl border border-[#00ABFB]/30 dark:border-[#00ABFB]/25 bg-gray-50/80 dark:bg-dark-card/80 p-6 md:p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-[#00ABFB]/50 dark:hover:border-[#00ABFB]/40">
-            <p className="text-xs font-semibold uppercase tracking-widest text-[#00ABFB] mb-3">
-              Meet my mentor
-            </p>
-            <p className="text-lg font-semibold text-gray-900 dark:text-white mb-1 flex flex-wrap items-center gap-2">
-              {mentor.name}
-              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-100">
-                <FaMapMarkerAlt className="w-3 h-3" />
-                Kuwait
-                <span className="inline-block w-4 h-3 rounded overflow-hidden">
-                  <KW title="Kuwait" className="w-full h-full block" />
+          {/*
+            Mentor section is temporarily hidden.
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={inView ? { opacity: 1 } : {}}
+              transition={{ duration: 0.5, delay: 0.6 }}
+            >
+              <div className="rounded-2xl border border-[#00ABFB]/30 dark:border-[#00ABFB]/25 bg-gray-50/80 dark:bg-dark-card/80 p-6 md:p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-[#00ABFB]/50 dark:hover:border-[#00ABFB]/40">
+              <p className="text-xs font-semibold uppercase tracking-widest text-[#00ABFB] mb-3">
+                Meet my mentor
+              </p>
+              <p className="text-lg font-semibold text-gray-900 dark:text-white mb-1 flex flex-wrap items-center gap-2">
+                {mentor.name}
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-100">
+                  <FaMapMarkerAlt className="w-3 h-3" />
+                  Kuwait
+                  <span className="inline-block w-4 h-3 rounded overflow-hidden">
+                    <KW title="Kuwait" className="w-full h-full block" />
+                  </span>
                 </span>
-              </span>
-            </p>
-            <p className="text-sm text-gray-500 dark:text-gray-200 mb-3">
-              {mentor.who}
-            </p>
-            <p className="text-gray-700 dark:text-gray-100 italic text-sm md:text-base mb-4 text-justify">
-              &ldquo;{mentor.description}&rdquo;
-            </p>
-            <div className="flex flex-wrap items-center gap-3">
-              <a
-                href={mentor.linkedinUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-[#0A66C2] text-white px-4 py-2.5 text-sm font-medium shadow-sm hover:bg-[#004182] hover:scale-105 hover:shadow-md active:scale-100 transition-all duration-200"
-              >
-                <FaLinkedin className="w-4 h-4 shrink-0 text-white" />
-                LinkedIn
-              </a>
-            </div>
-            </div>
-          </motion.div>
+              </p>
+              <p className="text-sm text-gray-500 dark:text-gray-200 mb-3">
+                {mentor.who}
+              </p>
+              <p className="text-gray-700 dark:text-gray-100 italic text-sm md:text-base mb-4 text-justify">
+                &ldquo;{mentor.description}&rdquo;
+              </p>
+              <div className="flex flex-wrap items-center gap-3">
+                <a
+                  href={mentor.linkedinUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full bg-[#0A66C2] text-white px-4 py-2.5 text-sm font-medium shadow-sm hover:bg-[#004182] hover:scale-105 hover:shadow-md active:scale-100 transition-all duration-200"
+                >
+                  <FaLinkedin className="w-4 h-4 shrink-0 text-white" />
+                  LinkedIn
+                </a>
+              </div>
+              </div>
+            </motion.div>
+          */}
         </motion.div>
       </div>
     </section>
