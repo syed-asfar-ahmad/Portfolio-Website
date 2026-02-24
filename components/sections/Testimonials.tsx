@@ -17,6 +17,19 @@ type TestimonialItem = {
 
 const testimonials: TestimonialItem[] = [
   {
+    quote: "I worked with Asfar Ahmad Bukhari and I highly recommend him. He's a very talented software engineer with great skills and a strong work ethic. Would definitely work with him again.",
+    name: 'Ammara Mehmood',
+    title: 'Software Engineer @ TxLabz',
+    linkedinUrl: 'https://www.linkedin.com/in/ammara-mehmood-696232218/',
+    image: '/images/logos/AMMARA.png',
+  },
+  {
+    quote: 'I had the pleasure of working with Asfar while I was handling QA and they were leading backend development. I highly recommend them for their strong technical expertise and problem-solving skills. They consistently delivered clean, scalable backend solutions and were always responsive to QA feedback.',
+    name: 'Fatima Mujahid',
+    title: 'Software Quality Assurance Engineer @ TxLabz',
+    linkedinUrl: 'https://www.linkedin.com/in/fatimamujahid31/',
+  },
+  {
     quote: "I had the pleasure of working with Syed Asfar as the Director of Graphic Design at IEEE RAS. Asfar is in charge of Marketing and Registrations, and I can confidently say that he is a highly skilled and dedicated professional. Asfar's expertise in marketing and registrations is evident in his ability to successfully promote and manage events for our society. He consistently exceeded our expectations in terms of event attendance and engagement. Furthermore, Asfar's excellent communication skills and attention to detail make him a valuable asset to our team. I highly recommend Asfar for any marketing or registration role. He will be a valuable asset to any organization, and I am confident that he will continue to excel in his future endeavors.",
     name: 'Sameer Faisal',
     title: 'Former President IEEE RAS COMSATS Lahore Chapter',
