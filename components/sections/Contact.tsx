@@ -32,7 +32,7 @@ const Contact = ({ showSectionHeader = true, skipBackground = false }: ContactPr
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    const serviceId = 'service_s6cip3k'
+    const serviceId = 'service_nbyy4sk'
     const templateId = 'template_zsij0se'
     const publicKey = 'UKNH39WyPpWGZDLtN'
     try {
