@@ -94,8 +94,6 @@ const About = ({ skipBackground = false }: AboutProps) => {
                     className="object-cover object-center"
                     sizes="(max-width: 1024px) 340px, 520px"
                     priority
-                    quality={100}
-                    unoptimized
                   />
                 </div>
               </div>

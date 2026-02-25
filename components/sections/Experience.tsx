@@ -20,19 +20,27 @@ type ExperienceCard = {
 const professionalData: ExperienceCard[] = [
   {
     title: 'Associate Software Engineer',
-    company: 'TxLabz',
-    period: 'October 2025 - Present',
+    company: 'BugMonks',
+    period: 'February 2026 - Present',
     location: 'Lahore',
-    description: 'Working as an Associate Software Engineer, developing and maintaining enterprise-level applications using modern technologies and best practices.',
-    logo: '/images/logos/TXLABZ.png',
+    description: 'Working as an Associate Software Engineer, building and maintaining scalable web applications with a strong focus on full-stack delivery, performance, and clean development practices.',
+    logo: '/images/logos/BUGMONKS.png',
     isCurrent: true,
+  },
+  {
+    title: 'Associate Software Engineer',
+    company: 'TxLabz',
+    period: 'October 2025 - February 2026',
+    location: 'Lahore',
+    description: 'Worked as an Associate Software Engineer, developed and maintained enterprise-level applications using modern full-stack technologies and engineering best practices.',
+    logo: '/images/logos/TXLABZ.png',
   },
   {
     title: 'MERN Intern',
     company: 'TxLabz',
     period: 'June 2025 - September 2025',
     location: 'Lahore',
-    description: 'Completed MERN stack internship, developing full-stack web applications using MongoDB, Express.js, React, and Node.js technologies.',
+    description: 'Completed MERN stack internship, developed full-stack web applications using MongoDB, Express.js, React, and Node.js technologies.',
     logo: '/images/logos/TXLABZ.png',
   },
   {
@@ -140,7 +148,7 @@ function ExperienceCardBlock({
   index: number
   inView: boolean
 }) {
-  const hasLargeLogo = item.company.includes('TxLabz') || item.company.includes('VLG')
+  const hasLargeLogo = item.company.includes('TxLabz') || item.company.includes('VLG') || item.company.includes('BugMonks')
 
   return (
     <motion.div
@@ -164,15 +172,11 @@ function ExperienceCardBlock({
                 className="object-contain"
               />
             </div>
-            <span
-              className={`shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold transition-colors duration-300 ${
-                item.isCurrent
-                  ? 'bg-[#00ABFB]/15 text-[#00ABFB] dark:bg-[#00ABFB]/20'
-                  : 'bg-gray-100 dark:bg-zinc-700 text-gray-600 dark:text-gray-200'
-              }`}
-            >
-              {item.isCurrent ? 'Current' : 'Completed'}
-            </span>
+            {item.isCurrent ? (
+              <span className="shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold transition-colors duration-300 bg-[#00ABFB]/15 text-[#00ABFB] dark:bg-[#00ABFB]/20">
+                Current
+              </span>
+            ) : null}
           </div>
 
           <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-1 transition-colors duration-300 group-hover:text-[#00ABFB] dark:group-hover:text-[#00ABFB]">

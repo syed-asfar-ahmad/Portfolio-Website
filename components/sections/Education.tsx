@@ -21,7 +21,6 @@ const Education = ({ skipBackground = false }: EducationProps) => {
       institution: 'COMSATS University Lahore Campus',
       period: 'February 2021 - January 2025',
       location: 'Lahore',
-      status: 'Completed',
       logo: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/logos/COMSATS.png`
     },
     {
@@ -29,7 +28,6 @@ const Education = ({ skipBackground = false }: EducationProps) => {
       institution: 'Punjab Group of Colleges',
       period: 'August 2018 - March 2020',
       location: 'Lahore',
-      status: 'Completed',
       logo: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/logos/PGC.png`
     },
     {
@@ -37,7 +35,6 @@ const Education = ({ skipBackground = false }: EducationProps) => {
       institution: 'Hashmat Memorial School',
       period: 'April 2016 - March 2018',
       location: 'Lahore',
-      status: 'Completed',
       logo: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/logos/HASHMAT.png`
     }
   ]
@@ -112,9 +109,6 @@ const Education = ({ skipBackground = false }: EducationProps) => {
                           className="object-contain"
                         />
                       </div>
-                      <span className="shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-gray-100 dark:bg-zinc-700 text-gray-600 dark:text-gray-300">
-                        {edu.status}
-                      </span>
                     </div>
 
                     <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 transition-colors duration-300 group-hover:text-[#00ABFB] dark:group-hover:text-[#00ABFB]">
@@ -175,9 +169,6 @@ const Education = ({ skipBackground = false }: EducationProps) => {
                       <div className="relative w-14 h-14 shrink-0">
                         <Image src={`${basePath}/images/logos/NAVTTC.png`} alt="NAVTTC" fill className="object-contain" />
                       </div>
-                      <span className="shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-gray-100 dark:bg-zinc-700 text-gray-600 dark:text-gray-300">
-                        Completed
-                      </span>
                     </div>
                     <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 transition-colors duration-300 group-hover:text-[#00ABFB] dark:group-hover:text-[#00ABFB]">
                       Artificial Intelligence & Machine Learning
@@ -217,9 +208,6 @@ const Education = ({ skipBackground = false }: EducationProps) => {
                       <div className="relative w-14 h-14 shrink-0">
                         <Image src={`${basePath}/images/logos/PNY.png`} alt="PNY Trainings" fill className="object-contain" />
                       </div>
-                      <span className="shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-gray-100 dark:bg-zinc-700 text-gray-600 dark:text-gray-300">
-                        Completed
-                      </span>
                     </div>
                     <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 transition-colors duration-300 group-hover:text-[#00ABFB] dark:group-hover:text-[#00ABFB]">
                       Advance Frontend Web Development
