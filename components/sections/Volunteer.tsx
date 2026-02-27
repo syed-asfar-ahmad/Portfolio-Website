@@ -81,7 +81,6 @@ const Volunteer = () => {
           transition={{ duration: 0.8 }}
           className="max-w-6xl mx-auto"
         >
-          {/* Header Section */}
           <div className="text-center mb-12">
             <motion.div
               initial={{ scale: 0 }}
@@ -111,9 +110,7 @@ const Volunteer = () => {
             </motion.p>
           </div>
 
-          {/* Volunteer Timeline */}
           <div className="relative">
-            {/* Timeline Line */}
             <div className="absolute left-4 sm:left-8 top-2 sm:top-3 bottom-0 w-0.5 bg-gray-600 dark:bg-gray-500"></div>
             
             {volunteerData.map((volunteer, index) => (
@@ -124,15 +121,11 @@ const Volunteer = () => {
                 transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
                 className="relative mb-8 sm:mb-12 last:mb-0"
               >
-                {/* Timeline Dot */}
                 <div className="absolute left-3 sm:left-6 w-3 h-3 sm:w-4 sm:h-4 bg-gray-600 dark:bg-gray-500 rounded-full border-2 sm:border-4 border-white dark:border-gray-800 shadow-lg z-10"></div>
                 
-                {/* Card */}
                 <div className="relative ml-8 sm:ml-20 bg-white dark:bg-dark-card rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-dark-border overflow-hidden">
-                  {/* Gradient top bar to match Ambassador cards */}
                   <div className="absolute top-0 left-0 right-0 h-1 bg-gray-600 dark:bg-gray-500"></div>
                   <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4">
-                    {/* Logo */}
                     <div className={`${volunteer.organization.includes('VLG') ? 'w-14 h-14 sm:w-16 sm:h-16' : 'w-10 h-10 sm:w-12 sm:h-12'} relative flex-shrink-0`}>
                       <Image
                         src={`${basePath}${volunteer.logo}`}
@@ -142,7 +135,6 @@ const Volunteer = () => {
                       />
                     </div>
                     
-                    {/* Content */}
                     <div className="flex-1 min-w-0">
                       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-3 gap-2">
                         <h3 className="text-base sm:text-lg font-bold text-gray-900 dark:text-white">
@@ -172,7 +164,6 @@ const Volunteer = () => {
             ))}
           </div>
 
-          {/* Volunteer Stats */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}

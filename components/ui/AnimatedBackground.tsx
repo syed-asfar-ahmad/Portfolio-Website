@@ -1,66 +1,57 @@
 'use client'
 
-/**
- * Animated background: moving grid, floating shapes, drifting particles.
- * Real animations only – project colors (gray + #00ABFB).
- */
 export default function AnimatedBackground() {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
-      {/* Moving grid */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#00ABFB]/8 via-transparent to-[#00ABFB]/6 dark:from-[#00ABFB]/12 dark:via-transparent dark:to-[#00ABFB]/8" />
+
       <div
-        className="absolute inset-0 opacity-[0.08] dark:opacity-[0.05] text-gray-500 dark:text-gray-500"
+        className="absolute inset-0"
         style={{
-          backgroundImage: `
-            linear-gradient(to right, currentColor 1px, transparent 1px),
-            linear-gradient(to bottom, currentColor 1px, transparent 1px)
-          `,
-          backgroundSize: '48px 48px',
-          animation: 'gridMove 20s linear infinite',
+          background:
+            'radial-gradient(70% 52% at 12% 18%, rgba(0,171,251,0.24), transparent 70%), radial-gradient(62% 48% at 88% 14%, rgba(0,171,251,0.16), transparent 72%), radial-gradient(56% 42% at 50% 88%, rgba(90,90,90,0.12), transparent 75%), radial-gradient(65% 50% at 18% 92%, rgba(0,171,251,0.16), transparent 74%), radial-gradient(55% 44% at 85% 90%, rgba(0,171,251,0.13), transparent 75%)',
         }}
       />
 
-      {/* Floating circles – move across screen */}
-      <div className="absolute top-[20%] w-20 h-20 rounded-full border-2 border-gray-400/60 dark:border-gray-500/25" style={{ animation: 'floatAcross 18s ease-in-out infinite' }} />
-      <div className="absolute top-[50%] w-14 h-14 rounded-full border-2 border-[#00ABFB]/50 dark:border-[#00ABFB]/30" style={{ animation: 'floatAcrossReverse 22s ease-in-out infinite', animationDelay: '-4s' }} />
-      <div className="absolute top-[75%] w-16 h-16 rounded-full border-2 border-gray-400/55 dark:border-gray-500/22" style={{ animation: 'floatAcross 20s ease-in-out infinite', animationDelay: '-8s' }} />
-      <div className="absolute top-[12%] w-12 h-12 rounded-full border-2 border-gray-400/50 dark:border-gray-500/20" style={{ animation: 'floatAcrossReverse 24s ease-in-out infinite', animationDelay: '-2s' }} />
-      <div className="absolute top-[65%] w-16 h-16 rounded-full border-2 border-[#00ABFB]/40 dark:border-[#00ABFB]/25" style={{ animation: 'floatAcross 19s ease-in-out infinite', animationDelay: '-6s' }} />
+      <div
+        className="absolute -left-[18%] -top-[10%] w-[62%] h-[58%] rounded-full blur-3xl"
+        style={{
+          background: 'radial-gradient(circle, rgba(0,171,251,0.28), rgba(0,171,251,0.02) 68%, transparent 78%)',
+          animation: 'floatAcross 30s ease-in-out infinite',
+        }}
+      />
+      <div
+        className="absolute -right-[20%] top-[22%] w-[60%] h-[54%] rounded-full blur-3xl"
+        style={{
+          background: 'radial-gradient(circle, rgba(0,171,251,0.20), rgba(0,171,251,0.02) 70%, transparent 80%)',
+          animation: 'floatAcrossReverse 34s ease-in-out infinite',
+        }}
+      />
+      <div
+        className="absolute left-[24%] bottom-[-22%] w-[52%] h-[56%] rounded-full blur-3xl"
+        style={{
+          background: 'radial-gradient(circle, rgba(120,120,120,0.14), rgba(120,120,120,0.02) 68%, transparent 78%)',
+          animation: 'drift 22s ease-in-out infinite',
+        }}
+      />
 
-      {/* Floating dots – drift upward */}
-      <div className="absolute top-[22%] right-[25%] w-2.5 h-2.5 rounded-full bg-gray-500/70 dark:bg-gray-400/35" style={{ animation: 'floatUp 14s ease-in-out infinite' }} />
-      <div className="absolute top-[60%] left-[20%] w-2 h-2 rounded-full bg-[#00ABFB]/60 dark:bg-[#00ABFB]/35" style={{ animation: 'floatUp 12s ease-in-out infinite', animationDelay: '-3s' }} />
-      <div className="absolute top-[85%] right-[35%] w-3 h-3 rounded-full bg-gray-500/65 dark:bg-gray-500/30" style={{ animation: 'floatUp 11s ease-in-out infinite', animationDelay: '-5s' }} />
-      <div className="absolute top-[8%] left-[40%] w-2 h-2 rounded-full bg-gray-500/60 dark:bg-gray-400/25" style={{ animation: 'floatUp 15s ease-in-out infinite', animationDelay: '-1s' }} />
-      <div className="absolute top-[40%] right-[10%] w-2.5 h-2.5 rounded-full bg-[#00ABFB]/50 dark:bg-[#00ABFB]/28" style={{ animation: 'floatUp 13s ease-in-out infinite', animationDelay: '-7s' }} />
-
-      {/* Floating squares – diagonal drift + rotate */}
-      <div className="absolute top-[28%] left-[45%] w-5 h-5 rounded-md border-2 border-gray-400/50 dark:border-gray-500/22" style={{ animation: 'floatDiagonal 16s linear infinite' }} />
-      <div className="absolute top-[58%] right-[45%] w-4 h-4 rounded border-2 border-[#00ABFB]/45 dark:border-[#00ABFB]/25" style={{ animation: 'floatDiagonal 14s linear infinite', animationDelay: '-4s' }} />
-      <div className="absolute top-[72%] left-[55%] w-5 h-5 rounded-md border-2 border-gray-400/48 dark:border-gray-500/20" style={{ animation: 'floatDiagonal 18s linear infinite', animationDelay: '-6s' }} />
-
-      {/* Pulse rings – expand/contract */}
-      <div className="absolute top-[45%] left-[50%] w-28 h-28 rounded-full border-2 border-gray-400/40 dark:border-gray-500/18" style={{ animation: 'pulseRing 6s ease-in-out infinite', transform: 'translate(-50%, -50%)' }} />
-      <div className="absolute top-[25%] right-[20%] w-16 h-16 rounded-full border-2 border-gray-400/35 dark:border-gray-500/15" style={{ animation: 'pulseRing 7s ease-in-out infinite', animationDelay: '-2s', transform: 'translate(-50%, -50%)' }} />
-      <div className="absolute bottom-[30%] left-[25%] w-20 h-20 rounded-full border-2 border-[#00ABFB]/35 dark:border-[#00ABFB]/15" style={{ animation: 'pulseRing 5.5s ease-in-out infinite', animationDelay: '-1s', transform: 'translate(-50%, -50%)' }} />
-
-      {/* Drifting particles */}
-      {[...Array(16)].map((_, i) => (
+      {Array.from({ length: 22 }).map((_, i) => (
         <div
-          key={i}
-          className="absolute w-1.5 h-1.5 rounded-full bg-gray-500/50 dark:bg-gray-400/25"
+          key={`dust-${i}`}
+          className="absolute rounded-full bg-[#00ABFB]/35 dark:bg-[#00ABFB]/30"
           style={{
-            left: `${8 + (i * 5) % 85}%`,
-            top: `${10 + (i * 6) % 85}%`,
-            animation: 'drift 5s ease-in-out infinite',
-            animationDelay: `${-(i * 0.2)}s`,
+            width: i % 4 === 0 ? '4px' : '3px',
+            height: i % 4 === 0 ? '4px' : '3px',
+            left: `${4 + (i * 9) % 92}%`,
+            top: `${4 + (i * 13) % 92}%`,
+            boxShadow: '0 0 10px rgba(0,171,251,0.35)',
+            animation: `floatUp ${10 + (i % 4)}s ease-in-out infinite`,
+            animationDelay: `${-i * 0.7}s`,
           }}
         />
       ))}
 
-      {/* Spinning dashed circles */}
-      <div className="absolute top-[38%] left-[28%] w-12 h-12 rounded-full border-2 border-dashed border-gray-400/45 dark:border-gray-500/18" style={{ animation: 'spinSlow 22s linear infinite', transform: 'translate(-50%, -50%)' }} />
-      <div className="absolute top-[62%] right-[28%] w-10 h-10 rounded-full border-2 border-dashed border-[#00ABFB]/40 dark:border-[#00ABFB]/18" style={{ animation: 'spinSlow 26s linear infinite reverse', animationDelay: '-5s', transform: 'translate(-50%, -50%)' }} />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_45%,rgba(0,0,0,0.08)_100%)] dark:bg-[radial-gradient(circle_at_center,transparent_45%,rgba(0,0,0,0.22)_100%)]" />
     </div>
   )
 }

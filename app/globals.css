@@ -21,7 +21,6 @@ body {
   background: #0a0a0a;
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -51,12 +50,10 @@ body {
   background: #6b7280;
 }
 
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Custom animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -72,7 +69,6 @@ html {
   animation: fadeInUp 0.6s ease-out;
 }
 
-/* Animated background */
 @keyframes gridMove {
   0% { background-position: 0 0; }
   100% { background-position: 48px 48px; }
@@ -119,7 +115,6 @@ html {
   75% { transform: translate(5px, 10px); }
 }
 
-/* Page loader */
 @keyframes loaderBar {
   0% { transform: translateX(-100%); }
   50% { transform: translateX(200%); }
@@ -139,7 +134,6 @@ html {
   animation: loaderDot 0.8s ease-in-out infinite;
 }
 
-/* Nav progress bar – thin top bar on route change */
 @keyframes nprogress {
   0% { transform: translateX(-100%); }
   100% { transform: translateX(400%); }

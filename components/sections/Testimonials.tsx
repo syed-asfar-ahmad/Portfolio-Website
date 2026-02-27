@@ -17,6 +17,13 @@ type TestimonialItem = {
 
 const testimonials: TestimonialItem[] = [
   {
+    quote: "I have worked with Asfar, and it was an amazing experience. He is a talented and hardworking developer who consistently delivers quality work. His dedication and creativity made our collaboration smooth and enjoyable. I would highly recommend him to any team.",
+    name: 'Zahida Bibi',
+    title: 'Associate Software Quality Assurance Engineer @ TxLabz',
+    linkedinUrl: 'https://www.linkedin.com/in/zahida-bibi/',
+    image: '/images/logos/ZAHIDA.png',
+  },
+  {
     quote: "I worked with Asfar Ahmad Bukhari and I highly recommend him. He's a very talented software engineer with great skills and a strong work ethic. Would definitely work with him again.",
     name: 'Ammara Mehmood',
     title: 'Software Engineer @ TxLabz',
@@ -118,7 +125,6 @@ const Testimonials = ({ showSectionHeader = true, skipBackground = false }: Test
             </div>
           )}
 
-          {/* Testimonial cards */}
           <div className="grid gap-6 md:gap-8 lg:grid-cols-1">
             {testimonials.map((item, i) => (
               <motion.article
@@ -130,13 +136,10 @@ const Testimonials = ({ showSectionHeader = true, skipBackground = false }: Test
                 whileHover={{ y: -6, transition: { duration: 0.25 } }}
               >
                 <div className="relative rounded-2xl md:rounded-3xl overflow-hidden border border-[#00ABFB]/30 dark:border-[#00ABFB]/25 bg-white dark:bg-gray-950/90 shadow-md transition-all duration-300 group-hover:border-[#00ABFB]/50 dark:group-hover:border-[#00ABFB]/40 group-hover:shadow-xl group-hover:shadow-[#00ABFB]/10 dark:group-hover:shadow-[#00ABFB]/5">
-                  {/* Left accent bar - thori moti blue line */}
                   <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#00ABFB] rounded-l-2xl" aria-hidden />
-                  {/* Decorative circle */}
                   <div className="absolute -top-24 -right-24 w-48 h-48 rounded-full bg-[#00ABFB]/5 pointer-events-none" aria-hidden />
 
                   <div className="relative pl-6 md:pl-8 pr-6 md:pr-8 py-6 md:py-10">
-                    {/* Quote icon - decorative */}
                     <div className="absolute top-6 right-6 md:top-8 md:right-8 opacity-10 dark:opacity-20">
                       <FaQuoteLeft className="w-16 h-16 md:w-20 md:h-20 text-[#00ABFB]" aria-hidden />
                     </div>
@@ -145,7 +148,6 @@ const Testimonials = ({ showSectionHeader = true, skipBackground = false }: Test
                       &ldquo;{item.quote}&rdquo;
                     </blockquote>
 
-                    {/* Author row */}
                     <div className="flex flex-wrap items-center gap-4">
                       <div className="flex items-center gap-4">
                         <div className="relative h-12 w-12 md:h-14 md:w-14 shrink-0 overflow-hidden rounded-full bg-gradient-to-br from-[#00ABFB] to-[#0090d4] shadow-lg shadow-[#00ABFB]/25">

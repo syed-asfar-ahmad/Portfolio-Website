@@ -50,7 +50,6 @@ export function NavigationProgressProvider({ children }: { children: React.React
   return (
     <NavigationProgressContext.Provider value={{ startNavigation }}>
       {children}
-      {/* Render bar in body to avoid removeChild conflicts during Next.js route transition */}
       {mounted && typeof document !== 'undefined' && createPortal(progressBar, document.body)}
     </NavigationProgressContext.Provider>
   )

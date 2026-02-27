@@ -272,7 +272,6 @@ const Experience = ({ skipBackground = false }: ExperienceProps) => {
           transition={{ duration: 0.8 }}
           className="max-w-6xl mx-auto"
         >
-          {/* Professional Experience */}
           <div className="text-center mb-12 md:mb-16">
             <motion.p
               initial={{ opacity: 0, y: 8 }}
@@ -312,7 +311,6 @@ const Experience = ({ skipBackground = false }: ExperienceProps) => {
             ))}
           </div>
 
-          {/* Volunteer Work */}
           <ExperienceSectionHeader
             label="Experience"
             title="Volunteer Work"
@@ -325,7 +323,6 @@ const Experience = ({ skipBackground = false }: ExperienceProps) => {
             ))}
           </div>
 
-          {/* Ambassador */}
           <ExperienceSectionHeader
             label="Experience"
             title="Ambassador Roles"

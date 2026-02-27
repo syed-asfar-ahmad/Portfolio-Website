@@ -26,6 +26,21 @@ const Header = () => {
     { name: 'CONTACT', href: '/contact' },
   ]
 
+  const normalizePath = (path: string) => {
+    if (!path) return '/'
+
+    let normalized = path
+
+    if (basePath && normalized.startsWith(basePath)) {
+      normalized = normalized.slice(basePath.length) || '/'
+    }
+
+    normalized = normalized.replace(/\/+$/, '')
+    return normalized || '/'
+  }
+
+  const isRouteActive = (href: string) => normalizePath(pathname) === normalizePath(href)
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
   }
@@ -41,7 +56,6 @@ const Header = () => {
       >
         <nav className="w-full px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between w-full gap-4">
-            {/* Extreme left: Logo / Name */}
             <Link href="/" onClick={startNavigation} className="flex-shrink-0 flex items-center group relative pb-1">
               <span className="font-dancing text-gray-900 dark:text-white text-xl sm:text-2xl font-medium transition-colors duration-200 group-hover:text-[#00ABFB]">
                 {name}
@@ -52,10 +66,9 @@ const Header = () => {
               />
             </Link>
 
-            {/* Center: Desktop Navigation */}
             <div className="hidden lg:flex flex-1 justify-center items-center space-x-1 min-w-0">
               {navItems.map((item, index) => {
-                const isActive = pathname === item.href
+                const isActive = isRouteActive(item.href)
                 return (
                   <div key={item.name} className="flex items-center flex-shrink-0">
                     <Link
@@ -77,7 +90,6 @@ const Header = () => {
               })}
             </div>
 
-            {/* Extreme right: Theme + Resume */}
             <div className="hidden lg:flex flex-shrink-0 items-center gap-2">
               <button
                 type="button"
@@ -102,7 +114,6 @@ const Header = () => {
               </a>
             </div>
 
-            {/* Mobile: Theme + Menu Toggle */}
             <div className="lg:hidden flex items-center gap-2">
               <button
                 type="button"
@@ -138,11 +149,9 @@ const Header = () => {
         </nav>
       </motion.header>
 
-      {/* Mobile Menu Overlay + Panel */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <>
-            {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -152,7 +161,6 @@ const Header = () => {
               onClick={() => setIsMobileMenuOpen(false)}
               aria-hidden
             />
-            {/* Menu Panel */}
             <motion.div
               initial={{ opacity: 0, y: -12 }}
               animate={{ opacity: 1, y: 0 }}
@@ -163,7 +171,7 @@ const Header = () => {
               <div className="max-h-[calc(100vh-6rem)] overflow-y-auto py-3">
                 <div className="px-3 space-y-0.5">
                   {navItems.map((item) => {
-                    const isActive = pathname === item.href
+                    const isActive = isRouteActive(item.href)
                     return (
                       <Link
                         key={item.name}

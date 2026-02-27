@@ -1,5 +1,3 @@
-/** @type {import('next').NextConfig} */
-// GitHub Pages: set BASE_PATH in Actions to repo name (e.g. /portfolio) for project pages
 const basePath = process.env.BASE_PATH || ''
 
 const nextConfig = {

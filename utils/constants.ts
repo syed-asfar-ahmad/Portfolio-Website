@@ -1,7 +1,5 @@
-// Base path for GitHub Pages (set in CI; empty when running locally)
 export const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
-// Site configuration and constants
 export const SITE_CONFIG = {
   name: 'Syed Asfar Ahmad Bukhari',
   title: 'Syed Asfar Ahmad Bukhari - Portfolio',
@@ -16,7 +14,6 @@ export const SITE_CONFIG = {
   },
 }
 
-// Navigation items
 export const NAV_ITEMS = [
   { name: 'Home', href: '/' },
   { name: 'Skills', href: '/skills' },
@@ -27,7 +24,6 @@ export const NAV_ITEMS = [
   { name: 'Contact', href: '/contact' },
 ]
 
-// Animation variants
 export const ANIMATION_VARIANTS = {
   fadeInUp: {
     hidden: { opacity: 0, y: 30 },
@@ -53,7 +49,6 @@ export const ANIMATION_VARIANTS = {
   }
 }
 
-// Contact form configuration
 export const CONTACT_FORM = {
   fields: [
     { name: 'name', label: 'Name', type: 'text', required: true },

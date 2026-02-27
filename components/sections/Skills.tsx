@@ -102,7 +102,6 @@ const Skills = ({ skipBackground = false }: SkillsProps) => {
           transition={{ duration: 0.6 }}
           className="max-w-6xl mx-auto"
         >
-          {/* Header – minimal typography + accent line */}
           <div className="text-center mb-12 md:mb-16">
             <motion.p
               initial={{ opacity: 0, y: 8 }}
@@ -136,7 +135,6 @@ const Skills = ({ skipBackground = false }: SkillsProps) => {
             </motion.p>
           </div>
 
-          {/* Categories */}
           <div className="space-y-10 md:space-y-14">
             {skillCategories.map((category, categoryIndex) => {
               const CategoryIcon = category.icon
@@ -148,7 +146,6 @@ const Skills = ({ skipBackground = false }: SkillsProps) => {
                   transition={{ duration: 0.5, delay: 0.3 + categoryIndex * 0.15 }}
                   className="relative"
                 >
-                  {/* Section label */}
                   <div className="flex items-center gap-3 mb-5">
                     <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-gray-100 dark:bg-dark-card border border-gray-200 dark:border-dark-border">
                       <CategoryIcon className="w-5 h-5 text-[#00ABFB]" />
@@ -163,7 +160,6 @@ const Skills = ({ skipBackground = false }: SkillsProps) => {
                     </div>
                   </div>
 
-                  {/* Skill cards grid */}
                   <motion.div
                     variants={containerVariants}
                     initial="hidden"
@@ -184,7 +180,6 @@ const Skills = ({ skipBackground = false }: SkillsProps) => {
                           <div
                             className="relative h-full rounded-2xl border border-[#00ABFB]/40 dark:border-[#00ABFB]/35 bg-white dark:bg-dark-card/80 p-4 md:p-5 transition-all duration-300 overflow-hidden hover:border-[#00ABFB]/60 dark:hover:border-[#00ABFB]/50 hover:shadow-lg hover:shadow-[#00ABFB]/10 dark:hover:shadow-[#00ABFB]/5"
                           >
-                            {/* Hover glow */}
                             <div
                               className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
                               style={{

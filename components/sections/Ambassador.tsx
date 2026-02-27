@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { FaRocket, FaCalendarAlt, FaMapMarkerAlt, FaUniversity } from 'react-icons/fa'
+import { FaRocket, FaMapMarkerAlt, FaUniversity } from 'react-icons/fa'
 import Image from 'next/image'
 import { basePath } from '@/utils/constants'
 
@@ -91,18 +91,14 @@ const Ambassador = () => {
                 transition={{ duration: 0.6, delay: index * 0.15 }}
                 className={`relative mb-8 sm:mb-10 last:mb-0`}
               >
-                {/* Timeline Dot */}
                 <div className="absolute left-4 sm:left-8 w-3 h-3 sm:w-4 sm:h-4 bg-gray-600 dark:bg-gray-500 rounded-full border-2 sm:border-4 border-white dark:border-gray-800 shadow-lg z-10 -translate-x-1/2"></div>
 
-                {/* Card */}
                 <div
                   className="relative ml-8 sm:ml-24 group bg-white/80 dark:bg-dark-card/80 backdrop-blur rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 dark:border-dark-border overflow-hidden"
                 >
-                  {/* Accent bar */}
                   <div className="absolute top-0 left-0 right-0 h-1 bg-gray-600 dark:bg-gray-500"></div>
 
                   <div className="flex items-start gap-3 sm:gap-5">
-                    {/* Logo */}
                     <div className="w-10 h-10 sm:w-14 sm:h-14 relative flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                       <Image
                         src={`${basePath}${ambassador.logo}`}
@@ -111,7 +107,6 @@ const Ambassador = () => {
                         className="object-contain"
                       />
                     </div>
-                    {/* Content */}
                     <div className="flex-1 min-w-0">
                       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
                         <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 dark:text-white group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors duration-300 break-words">
@@ -146,7 +141,6 @@ const Ambassador = () => {
             ))}
           </div>
 
-          {/* Summary removed per request */}
         </motion.div>
       </div>
     </section>

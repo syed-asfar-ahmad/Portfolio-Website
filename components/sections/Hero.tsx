@@ -41,21 +41,17 @@ const Hero = ({ skipBackground = false }: HeroProps) => {
       
       const timeout = setTimeout(() => {
         if (!isDeleting) {
-          // Typing
           if (charIndex < currentText.length) {
             setDisplayText(currentText.substring(0, charIndex + 1))
             setCharIndex(charIndex + 1)
           } else {
-            // Finished typing, wait then start deleting
             setTimeout(() => setIsDeleting(true), 2000)
           }
         } else {
-          // Deleting
           if (charIndex > 0) {
             setDisplayText(currentText.substring(0, charIndex - 1))
             setCharIndex(charIndex - 1)
           } else {
-            // Finished deleting, move to next text
             setIsDeleting(false)
             setTextIndex((textIndex + 1) % texts.length)
           }
@@ -84,7 +80,6 @@ const Hero = ({ skipBackground = false }: HeroProps) => {
           className="max-w-6xl mx-auto"
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
-            {/* Left: Heading */}
             <div className="text-left">
               <motion.p variants={itemVariants} className="uppercase tracking-widest text-sm mb-2">
                 <span className="text-gray-700 dark:text-gray-100 animate-pulse">
@@ -119,7 +114,6 @@ const Hero = ({ skipBackground = false }: HeroProps) => {
               </motion.div>
             </div>
 
-            {/* Right: Image with gradient blob */}
             <motion.div variants={itemVariants} className="relative w-64 h-64 sm:w-80 sm:h-80 mx-auto">
               <div className="absolute inset-0 rounded-[40%] bg-gray-400 dark:bg-gray-600 blur-2xl opacity-30"></div>
               <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white dark:border-gray-700 shadow-xl">
@@ -130,7 +124,6 @@ const Hero = ({ skipBackground = false }: HeroProps) => {
         </motion.div>
       </div>
 
-      {/* Floating circular Hire Me badge - section direct child, bottom-right of viewport */}
       <div className="hidden md:block absolute right-6 bottom-10 z-10">
         <div className="relative w-32 h-32">
           <svg viewBox="0 0 200 200" className="absolute inset-0 w-full h-full animate-[spin_10s_linear_infinite]">

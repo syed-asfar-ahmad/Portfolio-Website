@@ -4,6 +4,7 @@ import './globals.css'
 import { Toaster } from 'react-hot-toast'
 import { ThemeProvider } from '@/components/ThemeProvider'
 import { NavigationProgressProvider } from '@/components/NavigationProgress'
+import ScrollToTopButton from '@/components/ui/ScrollToTopButton'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -41,6 +42,7 @@ export default function RootLayout({
           <NavigationProgressProvider>
             {children}
           </NavigationProgressProvider>
+          <ScrollToTopButton />
           <Toaster
           position="top-center"
             toastOptions={{

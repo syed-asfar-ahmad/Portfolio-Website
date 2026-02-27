@@ -1,4 +1,3 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'class',
   content: [
@@ -9,7 +8,6 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // true black dark mode
         dark: {
           bg: '#0a0a0a',
           card: '#171717',

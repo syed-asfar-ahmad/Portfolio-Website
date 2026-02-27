@@ -112,9 +112,7 @@ const Contact = ({ showSectionHeader = true, skipBackground = false }: ContactPr
             </div>
           )}
 
-          {/* Single row: Form + Contact & Social */}
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-10">
-            {/* Form - takes 3 cols */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -197,7 +195,6 @@ const Contact = ({ showSectionHeader = true, skipBackground = false }: ContactPr
               </div>
             </motion.div>
 
-            {/* Contact details + Social - single card, no repetition */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}

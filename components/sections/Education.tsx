@@ -40,7 +40,7 @@ const Education = ({ skipBackground = false }: EducationProps) => {
   ]
 
   return (
-    <section id="education" className={`relative pt-6 pb-12 mb-16 overflow-hidden ${skipBackground ? 'bg-transparent' : 'bg-white dark:bg-black'}`}>
+    <section id="education" className={`relative pt-6 pb-16 overflow-hidden ${skipBackground ? 'bg-transparent' : 'bg-white dark:bg-black'}`}>
       {!skipBackground && <AnimatedBackground />}
       <div className="container mx-auto px-4 sm:px-5 relative z-10">
         <motion.div
@@ -50,7 +50,6 @@ const Education = ({ skipBackground = false }: EducationProps) => {
           transition={{ duration: 0.8 }}
           className="max-w-6xl mx-auto"
         >
-          {/* Header Section */}
           <div className="text-center mb-12 md:mb-16">
             <motion.p
               initial={{ opacity: 0, y: 8 }}
@@ -84,7 +83,6 @@ const Education = ({ skipBackground = false }: EducationProps) => {
             </motion.p>
           </div>
 
-          {/* Education Cards */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {educationData.map((edu, index) => (
               <motion.div
@@ -135,7 +133,6 @@ const Education = ({ skipBackground = false }: EducationProps) => {
             ))}
           </div>
 
-          {/* Certifications Section */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -152,7 +149,6 @@ const Education = ({ skipBackground = false }: EducationProps) => {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {/* AI & ML Certification */}
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -191,7 +187,6 @@ const Education = ({ skipBackground = false }: EducationProps) => {
                 </div>
               </motion.div>
 
-              {/* Frontend Development Certification */}
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}

@@ -8,13 +8,10 @@ const Footer = () => {
 
   return (
     <footer className="relative overflow-hidden border-t border-gray-200 dark:border-gray-700/80">
-      {/* Background: clean gradient, no grid */}
       <div className="absolute inset-0 bg-gradient-to-b from-gray-900 to-gray-950 dark:from-gray-950 dark:to-black dark:shadow-[0_-4px_24px_-4px_rgba(0,0,0,0.4)]" />
       <div className="relative">
-        {/* Main block */}
         <div className="container mx-auto px-6 pt-12 pb-8 md:pt-14 md:pb-10">
           <div className="flex flex-col items-center text-center max-w-2xl mx-auto">
-            {/* Name - matches header style */}
             <Link
               href="/"
               className="font-dancing text-2xl md:text-3xl font-medium text-white dark:text-white hover:text-[#00ABFB] transition-colors duration-200 mb-1"
@@ -24,7 +21,6 @@ const Footer = () => {
             <p className="text-sm text-gray-500 dark:text-gray-400 mb-8">
               Full Stack Developer · Building Digital Products
             </p>
-            {/* Social */}
             <div className="flex items-center gap-3">
               <a
                 href="https://github.com/syed-asfar-ahmad"
@@ -49,7 +45,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        {/* Bottom bar */}
         <div className="border-t border-gray-800 dark:border-gray-700/60">
           <div className="container mx-auto px-6 py-4">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-1 text-center text-sm text-gray-500 dark:text-gray-400">
