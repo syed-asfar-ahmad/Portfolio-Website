@@ -20,12 +20,22 @@ type ExperienceCard = {
 const professionalData: ExperienceCard[] = [
   {
     title: 'Associate Software Engineer',
-    company: 'BugMonks',
-    period: 'February 2026 - Present',
-    location: 'Lahore',
-    description: 'Working as an Associate Software Engineer, building and maintaining scalable web applications with a strong focus on full-stack delivery, performance, and clean development practices.',
-    logo: '/images/logos/BUGMONKS.png',
+    company: 'GenvoAI',
+    period: 'April 2026 - Present',
+    location: 'Remote',
+    description:
+      'Working as an Associate Software Engineer, building and maintaining scalable web applications. Also supporting AI and machine learning work, including image generation and AI models.',
+    logo: '/images/logos/GENVOAI.png',
     isCurrent: true,
+  },
+  {
+    title: 'Associate Software Engineer',
+    company: 'BugMonks',
+    period: 'February 2026 - April 2026',
+    location: 'Lahore',
+    description:
+      'Worked as an Associate Software Engineer, building and maintaining scalable web applications with a strong focus on full-stack delivery, performance, and clean development practices.',
+    logo: '/images/logos/BUGMONKS.png',
   },
   {
     title: 'Associate Software Engineer',
@@ -148,7 +158,10 @@ function ExperienceCardBlock({
   index: number
   inView: boolean
 }) {
-  const hasLargeLogo = item.company.includes('TxLabz') || item.company.includes('VLG') || item.company.includes('BugMonks')
+  const hasLargeLogo =
+    item.company.includes('TxLabz') ||
+    item.company.includes('VLG') ||
+    item.company.includes('BugMonks')
 
   return (
     <motion.div

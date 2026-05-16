@@ -26,11 +26,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="dark" suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){var e=localStorage.getItem('theme');var m=window.matchMedia('(prefers-color-scheme: dark)');var d=e==='dark'||(!e&&m.matches);if(d) document.documentElement.classList.add('dark'); else document.documentElement.classList.remove('dark');})();`,
+            __html: `(function(){var e=localStorage.getItem('theme');var d=e!=='light';if(d) document.documentElement.classList.add('dark'); else document.documentElement.classList.remove('dark');})();`,
           }}
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />

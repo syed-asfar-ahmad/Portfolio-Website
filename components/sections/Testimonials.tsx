@@ -35,6 +35,7 @@ const testimonials: TestimonialItem[] = [
     name: 'Fatima Mujahid',
     title: 'Software Quality Assurance Engineer @ TxLabz',
     linkedinUrl: 'https://www.linkedin.com/in/fatimamujahid31/',
+    image: '/images/logos/FATIMA.png',
   },
   {
     quote: "I had the pleasure of working with Syed Asfar as the Director of Graphic Design at IEEE RAS. Asfar is in charge of Marketing and Registrations, and I can confidently say that he is a highly skilled and dedicated professional. Asfar's expertise in marketing and registrations is evident in his ability to successfully promote and manage events for our society. He consistently exceeded our expectations in terms of event attendance and engagement. Furthermore, Asfar's excellent communication skills and attention to detail make him a valuable asset to our team. I highly recommend Asfar for any marketing or registration role. He will be a valuable asset to any organization, and I am confident that he will continue to excel in his future endeavors.",

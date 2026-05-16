@@ -2,8 +2,6 @@
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { FaLinkedin, FaMapMarkerAlt } from 'react-icons/fa'
-import KW from 'country-flag-icons/react/3x2/KW'
 import Image from 'next/image'
 import AnimatedBackground from '@/components/ui/AnimatedBackground'
 import { basePath } from '@/utils/constants'
@@ -13,13 +11,6 @@ const aboutParagraphs = [
   'Through my work on real world projects, I have gained strong experience in designing complete application workflows, managing data efficiently, and implementing features that support collaboration and system reliability. I enjoy translating complex requirements into practical, well organized solutions that align with business and user needs.',
   'I am committed to continuous improvement and believe in writing clear, maintainable code that supports long term growth. My goal is to build meaningful digital products while constantly refining my technical skills and professional approach.',
 ]
-
-const mentor = {
-  name: 'Fatmah Shah',
-  who: 'PRINCE2® & CTFL Certified · Business Analysis & Software Implementation Consultant · Senior Support Officer at Advanced Technology Company',
-  description: 'A trusted guide who has always been there showing the way when it mattered most and helping me grow. Grateful for her support and wisdom.',
-  linkedinUrl: 'https://www.linkedin.com/in/fatmah-shah-4a5391196/',
-}
 
 type AboutProps = { skipBackground?: boolean }
 
