@@ -18,16 +18,16 @@ type ExperienceCard = {
 }
 
 const professionalData: ExperienceCard[] = [
-  {
-    title: 'Associate Software Engineer',
-    company: 'GenvoAI',
-    period: 'April 2026 - Present',
-    location: 'Remote',
-    description:
-      'Working as an Associate Software Engineer, building and maintaining scalable web applications. Also supporting AI and machine learning work, including image generation and AI models.',
-    logo: '/images/logos/GENVOAI.png',
-    isCurrent: true,
-  },
+  // {
+  //   title: 'Associate Software Engineer',
+  //   company: 'GenvoAI',
+  //   period: 'April 2026 - Present',
+  //   location: 'Remote',
+  //   description:
+  //     'Working as an Associate Software Engineer, building and maintaining scalable web applications. Also supporting AI and machine learning work, including image generation and AI models.',
+  //   logo: '/images/logos/GENVOAI.png',
+  //   isCurrent: true,
+  // },
   {
     title: 'Associate Software Engineer',
     company: 'BugMonks',
