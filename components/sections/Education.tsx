@@ -84,12 +84,13 @@ function AcademicRow({
   isLast: boolean
 }) {
   const reduceMotion = useReducedMotion()
-  const [inView] = useInView({ triggerOnce: true, threshold: 0.2 })
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 })
   const years = parseYears(item.period)
   const reverse = index % 2 === 1
 
   return (
     <motion.div
+      ref={ref}
       initial={{ opacity: 0, y: reduceMotion ? 0 : 48 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.7, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
@@ -162,10 +163,11 @@ function CertificationCard({
   index: number
 }) {
   const reduceMotion = useReducedMotion()
-  const [inView] = useInView({ triggerOnce: true, threshold: 0.15 })
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 })
 
   return (
     <motion.article
+      ref={ref}
       initial={{ opacity: 0, x: reduceMotion ? 0 : 40 }}
       animate={inView ? { opacity: 1, x: 0 } : {}}
       transition={{ duration: 0.6, delay: index * 0.1 }}
