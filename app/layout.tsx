@@ -14,8 +14,8 @@ export const metadata: Metadata = {
   title: 'Syed Asfar Ahmad Bukhari - Portfolio',
   description: 'Personal portfolio website showcasing my work and skills',
   icons: {
-    icon: `${basePath}/images/logos/LOGO.ico`,
-    shortcut: `${basePath}/images/logos/LOGO.ico`,
+    icon: `${basePath}/images/logos/FAVICON.ico`,
+    shortcut: `${basePath}/images/logos/FAVICON.ico`,
     apple: `${basePath}/images/logos/LOGO.png`,
   },
 }
