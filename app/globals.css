@@ -115,25 +115,6 @@ html {
   75% { transform: translate(5px, 10px); }
 }
 
-@keyframes loaderBar {
-  0% { transform: translateX(-100%); }
-  50% { transform: translateX(200%); }
-  100% { transform: translateX(-100%); }
-}
-
-@keyframes loaderDot {
-  0%, 100% { opacity: 0.3; transform: scale(0.85); }
-  50% { opacity: 1; transform: scale(1.1); }
-}
-
-.animate-loaderBar {
-  animation: loaderBar 1.5s ease-in-out infinite;
-}
-
-.animate-loaderDot {
-  animation: loaderDot 0.8s ease-in-out infinite;
-}
-
 @keyframes nprogress {
   0% { transform: translateX(-100%); }
   100% { transform: translateX(400%); }
@@ -141,4 +122,21 @@ html {
 
 .animate-nprogress {
   animation: nprogress 1.2s ease-in-out infinite;
+}
+
+@keyframes gradientFlow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.animate-gradient-flow {
+  animation: gradientFlow 6s ease-in-out infinite;
+}
+
+@keyframes borderGlowSpin {
+  to { transform: rotate(360deg); }
+}
+
+.animate-border-glow {
+  animation: borderGlowSpin 5s linear infinite;
 }

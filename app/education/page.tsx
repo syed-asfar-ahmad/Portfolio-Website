@@ -5,7 +5,7 @@ import AnimatedBackground from '@/components/ui/AnimatedBackground'
 
 export default function EducationPage() {
   return (
-    <main className="min-h-screen bg-white dark:bg-black">
+    <main className="bg-white dark:bg-black">
       <Header />
       <div className="relative">
         <AnimatedBackground />

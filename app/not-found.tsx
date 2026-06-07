@@ -29,7 +29,7 @@ export default function NotFound() {
             Oops! This page went missing
           </p>
           <p className="text-sm text-gray-500 dark:text-gray-400 mb-10 max-w-sm mx-auto leading-relaxed">
-            Maybe it went for a coffee break, took a wrong turn, or is just camera shy. No worries - let&apos;s get you back.
+            Maybe it went for a coffee break, took a wrong turn, or is just camera shy. No worries, let&apos;s get you back.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

@@ -17,17 +17,17 @@ const Hero = ({ skipBackground = false }: HeroProps) => {
       opacity: 1,
       transition: {
         delayChildren: 0.3,
-        staggerChildren: 0.2
-      }
-    }
+        staggerChildren: 0.2,
+      },
+    },
   }
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
-      opacity: 1
-    }
+      opacity: 1,
+    },
   }
 
   const TypeText = ({ texts }: { texts: string[] }) => {
@@ -38,7 +38,7 @@ const Hero = ({ skipBackground = false }: HeroProps) => {
 
     useEffect(() => {
       const currentText = texts[textIndex]
-      
+
       const timeout = setTimeout(() => {
         if (!isDeleting) {
           if (charIndex < currentText.length) {
@@ -62,81 +62,144 @@ const Hero = ({ skipBackground = false }: HeroProps) => {
     }, [charIndex, isDeleting, textIndex, texts])
 
     return (
-      <span>
+      <span className="animate-gradient-flow bg-gradient-to-r from-[#00ABFB] via-[#45c8ff] to-[#00ABFB] bg-[length:200%_auto] bg-clip-text text-transparent">
         {displayText}
-        <span className="ml-1 text-gray-400 dark:text-gray-400 animate-pulse">|</span>
+        <span className="ml-1 text-[#00ABFB] animate-pulse">|</span>
       </span>
     )
   }
 
   return (
-    <section id="home" className={`relative min-h-screen flex items-center pt-24 overflow-hidden ${skipBackground ? 'bg-transparent' : 'bg-gray-50 dark:bg-black'}`}>
+    <section
+      id="home"
+      className={`relative flex min-h-screen items-center overflow-hidden pt-24 pb-10 lg:pb-0 ${
+        skipBackground ? 'bg-transparent' : 'bg-white dark:bg-black'
+      }`}
+    >
       {!skipBackground && <AnimatedBackground />}
-      <div className="container mx-auto px-3 sm:px-4 relative z-10">
+
+      <div className="pointer-events-none absolute -left-32 top-20 h-96 w-96 rounded-full bg-[#00ABFB]/10 blur-3xl" />
+      <div className="pointer-events-none absolute -right-32 bottom-24 h-96 w-96 rounded-full bg-[#45c8ff]/8 blur-3xl" />
+
+      <div className="container relative z-10 mx-auto px-3 sm:px-4 md:px-5">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="max-w-6xl mx-auto"
+          className="mx-auto max-w-6xl"
         >
-          <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
+          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
             <div className="text-left">
-              <motion.p variants={itemVariants} className="uppercase tracking-widest text-sm mb-2">
-                <span className="text-gray-700 dark:text-gray-100 animate-pulse">
-                  Hey there!
-                </span>
+              <motion.p
+                variants={itemVariants}
+                className="mb-2 text-[10px] font-semibold uppercase tracking-[0.26em] text-[#00ABFB] sm:mb-3 sm:text-xs sm:tracking-[0.35em]"
+              >
+                Hey there!
               </motion.p>
-              <motion.h1 variants={itemVariants} className="text-5xl md:text-6xl font-extrabold leading-tight mb-4">
-                I'm <span className="text-gray-900 dark:text-white">Syed Asfar Ahmad Bukhari</span>
+
+              <motion.h1
+                variants={itemVariants}
+                className="mb-4 text-[2rem] font-extrabold leading-[1.15] tracking-tight sm:text-4xl md:text-5xl lg:text-6xl"
+              >
+                <span className="text-gray-900 dark:text-white">I&apos;m </span>
+                <span className="text-gray-900 dark:text-white">Syed Asfar Ahmad Bukhari</span>
                 <br />
-                <span className="text-gray-800 dark:text-gray-100 text-3xl md:text-4xl">
-                  <TypeText texts={["Software Engineer", "Full Stack Developer"]} />
+                <span className="mt-2 block text-2xl font-bold sm:text-3xl md:text-4xl">
+                  <TypeText texts={['Software Engineer', 'Full Stack Developer']} />
                 </span>
               </motion.h1>
-              <motion.p variants={itemVariants} className="text-gray-600 dark:text-gray-200 text-lg mb-6 max-w-xl">
-                Full Stack Developer crafting scalable web solutions with modern technologies. Passionate about clean code, user experience, and innovative software engineering practices.
+
+              <motion.p
+                variants={itemVariants}
+                className="mb-6 max-w-xl text-[13px] leading-relaxed text-gray-500 dark:text-gray-300 sm:text-base"
+              >
+                Full Stack Developer crafting scalable web solutions with modern technologies.
+                Passionate about clean code, user experience, and innovative software engineering
+                practices.
               </motion.p>
-              <motion.div variants={itemVariants} className="flex items-center gap-4 mb-6">
-                <Link href="/projects" className="group relative px-6 py-3 rounded-xl bg-[#00ABFB] text-white font-semibold shadow-lg hover:shadow-xl hover:bg-[#0099e0] transform hover:-translate-y-0.5 transition-all duration-200">
-                  <span className="relative z-10">See my work</span>
+
+              <motion.div variants={itemVariants} className="mb-6 flex items-center gap-4">
+                <Link
+                  href="/projects"
+                  className="inline-flex h-11 items-center justify-center rounded-xl bg-[#00ABFB] px-6 text-sm font-semibold text-white shadow-[0_16px_40px_-20px_rgba(0,171,251,0.65)] transition-colors hover:bg-[#0098e0] sm:h-12 sm:text-[15px]"
+                >
+                  See my work
                 </Link>
-                <div className="flex items-center gap-3">
-                  <a href="https://github.com/syed-asfar-ahmad" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-[#24292e] text-white hover:bg-[#333] transform hover:scale-110 transition-all duration-200 shadow-md" aria-label="GitHub">
-                    <FaGithub className="w-5 h-5" />
+                <div className="flex items-center gap-2.5 sm:gap-3">
+                  <a
+                    href="https://github.com/syed-asfar-ahmad"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex h-10 w-10 items-center justify-center rounded-full bg-[#24292e] text-white shadow-md transition-transform hover:scale-105 sm:h-11 sm:w-11"
+                    aria-label="GitHub"
+                  >
+                    <FaGithub className="h-4 w-4 sm:h-5 sm:w-5" />
                   </a>
-                  <a href="https://linkedin.com/in/syed-asfar-ahmad-bukhari" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-[#0A66C2] text-white hover:bg-[#004182] transform hover:scale-110 transition-all duration-200 shadow-md" aria-label="LinkedIn">
-                    <FaLinkedin className="w-5 h-5" />
+                  <a
+                    href="https://linkedin.com/in/syed-asfar-ahmad-bukhari"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex h-10 w-10 items-center justify-center rounded-full bg-[#0A66C2] text-white shadow-md transition-transform hover:scale-105 sm:h-11 sm:w-11"
+                    aria-label="LinkedIn"
+                  >
+                    <FaLinkedin className="h-4 w-4 sm:h-5 sm:w-5" />
                   </a>
-                  <a href="mailto:contact@syedasfar.com" className="p-3 rounded-full bg-[#EA4335] text-white hover:bg-[#d93025] transform hover:scale-110 transition-all duration-200 shadow-md" aria-label="Email">
-                    <FaEnvelope className="w-5 h-5" />
+                  <a
+                    href="mailto:contact@syedasfar.com"
+                    className="flex h-10 w-10 items-center justify-center rounded-full bg-[#EA4335] text-white shadow-md transition-transform hover:scale-105 sm:h-11 sm:w-11"
+                    aria-label="Email"
+                  >
+                    <FaEnvelope className="h-4 w-4 sm:h-5 sm:w-5" />
                   </a>
                 </div>
               </motion.div>
             </div>
 
-            <motion.div variants={itemVariants} className="relative w-64 h-64 sm:w-80 sm:h-80 mx-auto">
-              <div className="absolute inset-0 rounded-[40%] bg-gray-400 dark:bg-gray-600 blur-2xl opacity-30"></div>
-              <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white dark:border-gray-700 shadow-xl">
-                <Image src={`${basePath}/images/logos/PROFILE.png`} alt="Profile photo" fill className="object-cover object-top" />
+            <motion.div
+              variants={itemVariants}
+              className="relative mx-auto h-64 w-64 sm:h-80 sm:w-80"
+            >
+              <div className="absolute inset-0 rounded-[40%] bg-[#00ABFB]/20 blur-2xl" />
+              <div className="relative h-full w-full overflow-hidden rounded-full border-2 border-[#00ABFB]/30 shadow-[0_8px_32px_-12px_rgba(0,171,251,0.5)] dark:border-[#00ABFB]/25">
+                <Image
+                  src={`${basePath}/images/logos/PROFILE.png`}
+                  alt="Profile photo"
+                  fill
+                  className="object-cover object-top"
+                />
               </div>
             </motion.div>
           </div>
         </motion.div>
       </div>
 
-      <div className="hidden md:block absolute right-6 bottom-10 z-10">
-        <div className="relative w-32 h-32">
-          <svg viewBox="0 0 200 200" className="absolute inset-0 w-full h-full animate-[spin_10s_linear_infinite]">
+      <div className="absolute bottom-10 right-4 z-10 hidden md:block lg:right-6">
+        <div className="relative h-32 w-32">
+          <svg
+            viewBox="0 0 200 200"
+            className="absolute inset-0 h-full w-full animate-[spin_10s_linear_infinite]"
+          >
             <defs>
-              <path id="hireMeCircle" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0" />
+              <path
+                id="hireMeCircle"
+                d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"
+              />
             </defs>
-            <text className="fill-gray-800 dark:fill-gray-200 text-[20px] tracking-[3px]">
-              <textPath href="#hireMeCircle" startOffset="0%" textLength="500" lengthAdjust="spacingAndGlyphs">
+            <text className="fill-gray-500 text-[20px] tracking-[3px] dark:fill-gray-400">
+              <textPath
+                href="#hireMeCircle"
+                startOffset="0%"
+                textLength="500"
+                lengthAdjust="spacingAndGlyphs"
+              >
                 Software Engineer • Full Stack Developer •
               </textPath>
             </text>
           </svg>
-          <Link href="/contact" className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-black dark:bg-dark-card text-white flex items-center justify-center text-sm font-semibold shadow hover:bg-gray-900 dark:hover:bg-zinc-600 transition-colors duration-200">
+          <Link
+            href="/contact"
+            className="absolute left-1/2 top-1/2 flex h-20 w-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#00ABFB] text-sm font-semibold text-white shadow-[0_12px_32px_-12px_rgba(0,171,251,0.65)] transition-colors hover:bg-[#0098e0]"
+          >
             Hire Me
           </Link>
         </div>
